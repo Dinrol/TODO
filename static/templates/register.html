@@ -1,0 +1,13 @@
+
+    <form action="" method="get">
+      <h1>Sign up</h1><br/>
+
+      <span class="input"></span>
+      <input ng-model="registerForm.username" type="text" name="name" placeholder="Login"  autocomplete="off" required />
+      <span class="input"></span>
+      <input ng-model="registerForm.email" type="email" name="email" placeholder="Email address" required />
+      <span id="passwordMeter"></span>
+      <input ng-model="registerForm.password" type="password" name="password" id="password" placeholder="Password"  required />
+
+      <button ng-click="register()" type="submit" value="Sign Up" class="icon-arrow-right"><span>Sign up</span></button>
+    </form>

@@ -1,0 +1,18 @@
+    <div class="authorization-block" ng-controller="LoginCtrl">
+        <button class="btn btn-primary btn-lg" ng-click="registerOpen()">Register</button>
+    </div>
+    <div class="container">
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputLogin" class="sr-only">Login</label>
+        <input ng-model="loginForm.username" type="text" id="inputLogin" class="form-control" placeholder="login" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input ng-model="loginForm.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button ng-click='login()' class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>

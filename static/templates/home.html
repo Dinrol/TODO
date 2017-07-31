@@ -1,0 +1,20 @@
+<div class="authorization-block" ng-controller="LoginCtrl">
+    <button class='btn btn-primary btn-lg' ng-click="logout()">Logout</button>
+</div>
+<div class='row text-center'>
+	<div class='col-sm-4 col-sm-offset-4'>
+		<h1>All Todos</h1>
+
+		<button ui-sref="add-todo" class='btn btn-primary btn-lg' style='margin-bottom:20px;'>Add Todo</button>
+        Search:
+        <input type="text" ng-model="search"/>
+		<ul class="list-group">
+			<li ng-repeat='todo in todos | filter:{title:search}' ng-class="{completed: todo.is_completed}" class="list-group-item">
+				<input type="checkbox" ng-checked="todo.is_completed" ng-change="toggleCompleted(todo)" ng-model='todo.is_completed'>  {{todo.title}}
+
+				<span class='badge' ng-click="deleteTodo(todo.id)">X</span>
+			</li>
+		</ul>
+        <p>Items is active: {{ remainingCount }}</p>
+    </div>
+</div>
