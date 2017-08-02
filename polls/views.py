@@ -1,18 +1,12 @@
 
-from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.views.generic import FormView
-from pip._vendor.appdirs import unicode
-from rest_framework import viewsets, status
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework import viewsets
 
-from polls import permissions
 from polls.forms import RegisterForm
 from polls.models import Todo
 from polls.permissions import IsOwnerOrReadOnly
-from .serializers import TodoSerializer, UserSerializer
-from rest_framework import permissions
+from .serializers import TodoSerializer
 
 
 class TodoViewSet(viewsets.ModelViewSet):
